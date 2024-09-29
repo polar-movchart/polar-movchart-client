@@ -30,7 +30,7 @@ export default function Home() {
           </button>
         </div>
         {/* 영화 카드 섹션 */}
-        <div className="flex justify-center space-x-8 mt-8">
+        <div className="flex flex-col items-center space-y-8 mt-8">
           {movies.map((movie) => (
             <MovieCard
               key={movie.id}
