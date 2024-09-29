@@ -9,8 +9,12 @@ interface MovieCardProps {
 
 const MovieCard: React.FC<MovieCardProps> = ({ id, title, poster, rating }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-4 w-48">
-      <Link 
+    <div className="bg-white shadow-lg rounded-lg p-4 w-48 relative">
+      {/*제목*/}
+      <h3 className="text-gray-500 flex justify-center items-center mb-2 font-bold">
+        {title}
+      </h3>
+      <Link
         href={{
           pathname: '/movie',
           query: { id, title }
@@ -26,7 +30,6 @@ const MovieCard: React.FC<MovieCardProps> = ({ id, title, poster, rating }) => {
         <span>★</span>
         <span>{rating}</span>
       </div>
-      <p className="text-gray-700 mt-2">{title}</p>
     </div>
   );
 };
