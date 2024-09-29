@@ -1,3 +1,4 @@
+import Layout from "./components/Layout";
 import MovieCard from "./MovieCard";
 
 export default function Home() {
@@ -17,28 +18,30 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 text-center">
-      {/* 탭 섹션 */}
-      <div className="flex justify-center space-x-4 py-4">
-        <button className="px-4 py-2 bg-red-600 text-white font-semibold rounded-md">
-          최근 영화 별점
-        </button>
-        <button className="px-4 py-2 bg-gray-200 text-gray-700 font-semibold rounded-md">
-          전문가별 별점
-        </button>
-      </div>
-      {/* 영화 카드 섹션 */}
-      <div className="flex justify-center space-x-8 mt-8">
-        {movies.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            id={movie.id}
-            title={movie.title}
-            rating={movie.rating}
-            poster={movie.poster}
+    <Layout>
+      <div className="min-h-screen bg-gray-100 text-center">
+        {/* 탭 섹션 */}
+        <div className="flex justify-center space-x-4 py-4">
+          <button className="px-4 py-2 bg-red-600 text-white font-semibold rounded-md">
+            최근 영화 별점
+          </button>
+          <button className="px-4 py-2 bg-gray-200 text-gray-700 font-semibold rounded-md">
+            전문가별 별점
+          </button>
+        </div>
+        {/* 영화 카드 섹션 */}
+        <div className="flex justify-center space-x-8 mt-8">
+          {movies.map((movie) => (
+            <MovieCard
+              key={movie.id}
+              id={movie.id}
+              title={movie.title}
+              rating={movie.rating}
+              poster={movie.poster}
 
-          />))}
+            />))}
+        </div>
       </div>
-    </div>
+    </Layout>
   );
 }

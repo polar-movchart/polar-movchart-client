@@ -1,4 +1,3 @@
-// MovieCard.tsx
 import Link from "next/link";
 
 interface MovieCardProps {
