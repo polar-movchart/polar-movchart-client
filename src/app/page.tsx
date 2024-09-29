@@ -5,12 +5,14 @@ export default function Home() {
   const movies = [
     {
       id: '1',
+      ranking: 1,
       title: '국외자들',
       rating: 8.0,
       poster: 'https://image.cine21.com/resize/cine21/poster/2024/0913/16_29_35__66e3e9dfbcf5d[X230,329].jpg'
     },
     {
       id: '2',
+      ranking: 2,
       title: '새벽의 모든',
       rating: 7.9,
       poster: '/새벽의-모든-포스터.jpg'
@@ -38,7 +40,7 @@ export default function Home() {
               title={movie.title}
               rating={movie.rating}
               poster={movie.poster}
-
+              ranking={movie.ranking}
             />))}
         </div>
       </div>

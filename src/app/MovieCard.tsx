@@ -5,14 +5,15 @@ interface MovieCardProps {
   title: string;
   poster: string;
   rating: number;
+  ranking: number;
 }
 
-const MovieCard: React.FC<MovieCardProps> = ({ id, title, poster, rating }) => {
+const MovieCard: React.FC<MovieCardProps> = ({ id, title, poster, rating, ranking }) => {
   return (
     <div className="bg-white shadow-lg rounded-lg p-4 w-48 relative">
       {/*제목*/}
       <h3 className="text-gray-500 flex justify-center items-center mb-2 font-bold">
-        {title}
+      {ranking}. {title}
       </h3>
       <Link
         href={{
