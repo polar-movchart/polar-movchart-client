@@ -13,7 +13,7 @@ const MovieCard: React.FC<MovieCardProps> = ({ id, title, poster, rating }) => {
     <div className="bg-white shadow-lg rounded-lg p-4 w-48">
       <Link 
         href={{
-          pathname: '/about',
+          pathname: '/movie',
           query: { id, title }
         }}
       >
