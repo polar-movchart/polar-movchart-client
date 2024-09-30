@@ -5,17 +5,31 @@ export default function Home() {
   const movies = [
     {
       id: '1',
+      code: 20239670,
+	    ISAN: "ABC",
       ranking: 1,
       title: '국외자들',
       rating: 8.0,
-      poster: 'https://image.cine21.com/resize/cine21/poster/2024/0913/16_29_35__66e3e9dfbcf5d[X230,329].jpg'
+      poster: 'https://image.cine21.com/resize/cine21/poster/2024/0913/16_29_35__66e3e9dfbcf5d[X230,329].jpg',
+      genres: "Action, Drama",
+      runtime: 143,
+      age_rating: 12,
+      country: '한국',
+      release_date: '2024-09-13',
+      production_year: '2024-09-13'
     },
     {
       id: '2',
       ranking: 2,
       title: '새벽의 모든',
       rating: 7.9,
-      poster: '/새벽의-모든-포스터.jpg'
+      poster: '/새벽의-모든-포스터.jpg',
+      genres: "Thriller",
+      runtime: 120,
+      age_rating: 15,
+      country: "한국",
+      release_date: "2024-09-20",
+      production_year: "2024"
     }
   ];
 
@@ -41,7 +55,14 @@ export default function Home() {
               rating={movie.rating}
               poster={movie.poster}
               ranking={movie.ranking}
-            />))}
+              genres={movie.genres || ""}
+              runtime={movie.runtime || 0}
+              age_rating={movie.age_rating || 0}
+              country={movie.country || ""}
+              release_date={movie.release_date || ""}
+              production_year={movie.production_year || ""}
+              />
+          ))}
         </div>
       </div>
     </Layout>
