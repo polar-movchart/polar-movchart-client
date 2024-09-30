@@ -33,7 +33,7 @@ const MovieCard: React.FC<MovieCardProps> = ({
       {/*제목, 평점*/}
       <div className="flex items-center mb-2 w-full">
         <div className="text-red-600 font-bold text-lg flex space-x-1 mr-2">
-          <span>*</span>
+          <span>&#9733;</span> {/* 별 모양 아이콘 */}
           <span>{rating}</span>
           <h3 className="text-gray-500 font-bold flex-grow">
             {ranking}. {title}
