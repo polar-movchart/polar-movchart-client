@@ -18,7 +18,7 @@ export default function Movie() {
     ISAN: "ABC",
     ranking: 1,
     title: '국외자들',
-    rating: 8.0,
+    rating: 7.5,
     poster: 'https://image.cine21.com/resize/cine21/poster/2024/0913/16_29_35__66e3e9dfbcf5d[X230,329].jpg',
     genres: "Action, Drama",
     runtime: 143,
