@@ -6,9 +6,11 @@ export default function Home() {
     {
       id: '1',
       code: 20239670,
-	    ISAN: "ABC",
+      ISAN: "ABC",
       ranking: 1,
       title: '국외자들',
+      main_cast: ['황정민', '신태경'],
+      directors: ['류승완', '류승완2'],
       rating: 8.0,
       poster: 'https://image.cine21.com/resize/cine21/poster/2024/0913/16_29_35__66e3e9dfbcf5d[X230,329].jpg',
       genres: "Action, Drama",
@@ -22,8 +24,40 @@ export default function Home() {
       id: '2',
       ranking: 2,
       title: '새벽의 모든',
+      main_cast: ['황정민', '신태경'],
+      directors: ['류승완', '류승완2'],
       rating: 7.9,
-      poster: '/새벽의-모든-포스터.jpg',
+      poster: 'https://image.cine21.com/resize/cine21/poster/2024/0913/16_29_35__66e3e9dfbcf5d[X230,329].jpg',
+      genres: "Thriller",
+      runtime: 120,
+      age_rating: 15,
+      country: "한국",
+      release_date: "2024-09-20",
+      production_year: "2024"
+    },
+    {
+      id: '2',
+      ranking: 2,
+      title: '새벽의 모든',
+      main_cast: ['황정민', '신태경'],
+      directors: ['류승완', '류승완2'],
+      rating: 7.9,
+      poster: 'https://image.cine21.com/resize/cine21/poster/2024/0913/16_29_35__66e3e9dfbcf5d[X230,329].jpg',
+      genres: "Thriller",
+      runtime: 120,
+      age_rating: 15,
+      country: "한국",
+      release_date: "2024-09-20",
+      production_year: "2024"
+    },
+    {
+      id: '2',
+      ranking: 2,
+      title: '새벽의 모든',
+      main_cast: ['황정민', '신태경'],
+      directors: ['류승완', '류승완2'],
+      rating: 7.9,
+      poster: 'https://image.cine21.com/resize/cine21/poster/2024/0913/16_29_35__66e3e9dfbcf5d[X230,329].jpg',
       genres: "Thriller",
       runtime: 120,
       age_rating: 15,
@@ -61,7 +95,9 @@ export default function Home() {
               country={movie.country || ""}
               release_date={movie.release_date || ""}
               production_year={movie.production_year || ""}
-              />
+              main_cast={movie.main_cast}
+              directors={movie.directors}
+            />
           ))}
         </div>
       </div>
