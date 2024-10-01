@@ -8,9 +8,9 @@ import { ResponsiveLine } from '@nivo/line'
 // no chart will be rendered.
 // website examples showcase many properties,
 // you'll often use just a few of them.
-const LineChart = ({ data /* see data tab */ }) => {
+const LineChart = ({ data, width, height /* see data tab */ }) => {
     return (
-    <div className="bg-red-50 "style={{ height: '300px', width: '600px' }}>
+    <div className="bg-red-50" style={{ height: height, width: width }}>
         <ResponsiveLine
             data={data}
             margin={{ top: 50, right: 110, bottom: 50, left: 60 }}

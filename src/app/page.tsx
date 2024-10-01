@@ -69,7 +69,7 @@ export default function Home() {
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gray-100 text-center">
+      <div className="bg-orange-300 min-h-screen">
         {/* 탭 섹션 */}
         <div className="flex justify-center space-x-4 py-4">
           <button className="px-4 py-2 bg-red-600 text-white font-semibold rounded-md">

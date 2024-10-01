@@ -44,10 +44,12 @@ export default function Movie() {
     }
   ];
 
+  const cardWidth = '450px';
+  const chartHeight = '200px';
 
   return (
     <Layout>
-      <div className="min-h-screen bg-gray-100 text-center">
+      <div className="min-h-screen bg-gray-100">
         {/* 탭 섹션 */}
         <div className="flex justify-center space-x-4 py-4">
           <button className="px-4 py-2 bg-red-600 text-white font-semibold rounded-md">
@@ -57,10 +59,9 @@ export default function Movie() {
             전문가별 별점
           </button>
         </div>
-        <div className="flex flex-row justify-center">
+        <div className="bg-lime-50 flex justify-center">
           {/* 영화 카드 섹션 */}
           <div className="flex flex-col items-center">
-            (
             <MovieCard
               key={movie.id}
               id={id}
@@ -77,11 +78,10 @@ export default function Movie() {
               main_cast={movie.main_cast}
               directors={movie.directors}
             />
-            )
 
             {/* 라인차트 표시 */}
-            <div className="w-[80%] mx-auto">
-              <LineChart data={chartData} /> {/* 차트를 표시하는 부분 */}
+            <div className="w-full mt-4">
+              <LineChart data={chartData} width={cardWidth} height={chartHeight}/> {/* 차트를 표시하는 부분 */}
             </div>
 
           </div>
