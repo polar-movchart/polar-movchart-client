@@ -3,13 +3,16 @@
 import { useSearchParams } from "next/navigation";
 import Layout from "../components/Layout";
 import MovieCard from "../MovieCard";
-import React from "react";
+import React, { useState } from "react";
 import LineChart from '../components/LineChart';
+import StarRating from "./StarRating";
 
 export default function Movie() {
   const searchParams = useSearchParams();
   const id = searchParams.get('id');
   const title = searchParams.get('title');
+
+  const [ratingValue, setRatingValue] = useState(0); // 별점 값을 저장하는 state 추가
 
   const movie =
   {
@@ -61,7 +64,7 @@ export default function Movie() {
         </div>
         <div className="bg-lime-50 flex justify-center">
           {/* 영화 카드 섹션 */}
-          <div className="flex flex-col items-center">
+          <div className="bg-gray-200 flex flex-col items-center">
             <MovieCard
               key={movie.id}
               id={id}
@@ -81,9 +84,13 @@ export default function Movie() {
 
             {/* 라인차트 표시 */}
             <div className="w-full mt-4">
-              <LineChart data={chartData} width={cardWidth} height={chartHeight}/> {/* 차트를 표시하는 부분 */}
+              <LineChart data={chartData} width={cardWidth} height={chartHeight} /> {/* 차트를 표시하는 부분 */}
             </div>
 
+            <div className="bg-sky-200 flex flex-col items-center mt-4 mb-4">
+              <p className="text-black">평점을 입력해주세요.</p>
+              <StarRating />
+            </div>
           </div>
 
         </div>
