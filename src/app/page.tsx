@@ -1,5 +1,5 @@
 import Layout from "./components/Layout";
-import MovieCard from "./MovieCard";
+import MovieCard from "./components/MovieCard";
 
 export default function Home() {
   const movies = [

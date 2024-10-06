@@ -2,10 +2,11 @@
 
 import { useSearchParams } from "next/navigation";
 import Layout from "../components/Layout";
-import MovieCard from "../MovieCard";
 import React, { useState } from "react";
 import LineChart from '../components/LineChart';
 import StarRating from "./StarRating";
+import MovieCard from "../components/MovieCard";
+import Reviews from "../components/review/Reviews";
 
 export default function Movie() {
   const searchParams = useSearchParams();
@@ -83,7 +84,7 @@ export default function Movie() {
             />
 
             {/* 라인차트 표시 */}
-            <div className="w-full mt-4">
+            <div className="w-full">
               <LineChart data={chartData} width={cardWidth} height={chartHeight} /> {/* 차트를 표시하는 부분 */}
             </div>
 
@@ -92,11 +93,13 @@ export default function Movie() {
               <StarRating />
             </div>
           </div>
-
         </div>
 
-
-
+        <div className="flex justify-center">
+          <div className="w-full max-w-[450px]">
+            <Reviews />
+          </div>
+        </div>
       </div>
 
     </Layout>

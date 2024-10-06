@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa"; // 별 아이콘 사용
-import StarRating from "./components/StarRating";
+import StarRatingSum from "./StarRatingSum";
 
 interface MovieCardProps {
   id: string;
@@ -39,7 +38,7 @@ const MovieCard: React.FC<MovieCardProps> = ({
       {/* 별점과 평점 */}
       <div className="flex mb-2 w-full">
         <span className="mr-2 text-gray-600">평점: {rating}</span>
-        <StarRating rating={rating} />  {/* StarRating 컴포넌트 사용 */}
+        <StarRatingSum rating={rating} />  {/* StarRating 컴포넌트 사용 */}
       </div>
       {/*제목, 랭킹*/}
       <div className="flex mb-2 w-full">
